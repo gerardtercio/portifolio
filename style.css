@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    height: auto;
+    min-height: 96px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo {
+    font-size: clamp(24px, 4vw, 32px);
+}
+
+nav {
+    font-size: clamp(16px, 3vw, 24px);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-weight: 200;
+    font-size: clamp(16px, 3vw, 20px);
+}
+
+/* Card Styles */
+.card {
+    border: 4px solid black;
+    border-radius: 24px;
+    overflow: hidden;
+    margin: 0 auto 64px;
+    max-width: 1100px;
+    width: calc(100% - 40px);
+}
+
+.card-content {
+    padding: 32px 20px;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    position: relative;
+}
+
+.about-text {
+    max-width: 100%;
+    margin-top: 40px;
+}
+
+.about-text h2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 32px;
+}
+
+.about-text p {
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1.6;
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+.about img {
+    width: 100%;
+    max-width: 308px;
+    height: auto;
+    object-fit: cover;
+    position: static;
+    margin: 0 auto;
+}
+
+/* Projects Section */
+.projects {
+    position: relative;
+    margin: 0 auto 64px;
+    max-width: 1100px;
+    padding: 0 20px;
+}
+
+.projects h2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 32px;
+}
+
+.projects > p {
+    font-family: 'JetBrains Mono', monospace;
+    max-width: 576px;
+    margin-bottom: 64px;
+    line-height: 1.6;
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+.projects > img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    display: none;
+}
+
+.project-card {
+    margin-bottom: 40px;
+}
+
+.project-content {
+    display: flex;
+    gap: 32px;
+    padding: 32px 20px;
+    flex-direction: column;
+}
+
+.project-text {
+    max-width: 100%;
+}
+
+.project-text h3 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: clamp(24px, 4vw, 40px);
+    margin-bottom: 32px;
+}
+
+.project-text p {
+    font-family: 'JetBrains Mono', monospace;
+    line-height: 1.6;
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Contact Section */
+.contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.contact h2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: clamp(32px, 5vw, 48px);
+    margin-bottom: 32px;
+}
+
+.contact h3 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: clamp(20px, 3vw, 24px);
+    margin-bottom: 24px;
+}
+
+.contact p {
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 16px;
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+.contact a {
+    color: black;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .about {
+        flex-direction: row;
+    }
+
+    .about-text {
+        max-width: 60%;
+    }
+
+    .project-content {
+        flex-direction: row;
+    }
+
+    .project-text {
+        max-width: 50%;
+    }
+
+    .contact-grid {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .contact-grid > * {
+        flex: 1 1 45%;
+    }
+
+    .projects > img {
+        display: block;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 40px;
+    }
+
+    .about-text {
+        max-width: 632px;
+    }
+
+    .project-text {
+        max-width: 510px;
+    }
+}
